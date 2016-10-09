@@ -25,13 +25,37 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    int quantity = 2;
+
     /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int numberOfCoffees = 2;
-        display(numberOfCoffees);
-        displayPrice(numberOfCoffees*5); //calling the displayPrice method
+        display(quantity);
+        displayPrice(quantity*5); //calling the displayPrice method
+    }
+
+    /**
+     * This method is called when +button is clicked
+     */
+    public void increment(View view){
+        //TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
+        //char quantity = quantityTextView.getText()+1;
+        quantity = quantity+1;
+        display(quantity);
+    }
+
+    /**
+     * This method is called when -button is clicked
+     */
+    public void decrement(View view){
+        if(quantity>0){
+            quantity = quantity - 1;
+        }
+        else{
+            // Do nothing.
+        }
+        display(quantity);
     }
 
     /**
