@@ -25,14 +25,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    int quantity = 2;
+    int quantity = 0;
 
     /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
         display(quantity);
-        displayPrice(quantity*5); //calling the displayPrice method
+        String priceMessage = "";
+
+        if(quantity>0){
+            priceMessage = "Thank you!";
+        }
+        else{
+            priceMessage = "Don\'t you want coffee?";
+        }
+        displayMessage("Total: $" + quantity*5 + "\n" + priceMessage);
     }
 
     /**
@@ -66,17 +74,10 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
 
-    /**
-     * This method displays the given price on the screen
-     */
-    private void displayPrice(int number){
-        /**
-         * This creats a javathing called TextView, which I here name priceTextView,
-         * and I then associate that with the corresponding TextView in the XML file
-         */
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
 
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+    private void displayMessage(String message){
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
     }
 
 
