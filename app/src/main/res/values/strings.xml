@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">JustJava</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Header text for the list of toppings [CHAR LIMIT=20] -->
+    <string name="toppings">Toppings</string>
+    <!-- Than you message for the order summary [CHAR LIMIT=NONE] -->
+    <string name="thank_you">Thank you!</string>
 </resources>

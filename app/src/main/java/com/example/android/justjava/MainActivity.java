@@ -118,8 +118,8 @@ public class MainActivity extends AppCompatActivity {
     * Display order summary in screen
     */
     private void displayTotal(int total){
-        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        orderSummaryTextView.setText("Total: $" + total);
+        TextView totalTextView = (TextView) findViewById(R.id.total_text_view);
+        totalTextView.setText("Total: $" + total);
     }
 
     /**
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
         orderSummary += "\nWant chocolate: "+ addChocolate();
         orderSummary += "\nQuantity: " + quantity;
         orderSummary += "\nTotal: $" + calculatePrice();
-        orderSummary += "\nThank you!";
+        orderSummary += "\n" + getString(R.string.thank_you);
 
         return orderSummary;
     }
