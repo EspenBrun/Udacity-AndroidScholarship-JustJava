@@ -6,6 +6,14 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <!-- To style all button text-->
+        <item name="android:textAppearanceButton">@style/TextAppearance.AppCompat.Button.Custom</item>
+    </style>
+
+    <!-- To style all button text-->
+    <style name="TextAppearance.AppCompat.Button.Custom">
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 
 </resources>
