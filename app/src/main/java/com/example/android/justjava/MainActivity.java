@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
      * Create order summary
      */
     private String createOrderSummary(int quantity){
-        String orderSummary = "Name: Mr " + getName();
+        String orderSummary = getString(R.string.order_summary_name, getName());
         orderSummary += "\nWant whipped cream: " + addWhippedCream();
         orderSummary += "\nWant chocolate: "+ addChocolate();
         orderSummary += "\nQuantity: " + quantity;
